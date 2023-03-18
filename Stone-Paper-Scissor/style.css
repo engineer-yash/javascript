@@ -99,7 +99,7 @@ body {
 }
 /* this button is inspired from this -- https://www.newline.co/pricing */
 .button {
-  --width: 130px;
+  --width: 150px;
   --timing: 2s;
   border: 0;
   width: var(--width);
