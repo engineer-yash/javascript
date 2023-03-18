@@ -7,9 +7,9 @@ html {
 body {
   display: grid;
   place-content: center;
-  min-height: 20vh;
+  min-height: 30vh;
   margin: 0;
-  padding: 60px;
+  padding: 40px;
   box-sizing: border-box;
   
 
