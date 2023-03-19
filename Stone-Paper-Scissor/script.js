@@ -1,17 +1,17 @@
 function match(user, cpu) {
   if (user === cpu) {
     return "Nobody";
-  } else if (cpu === "stone" && user === "paper") {
+  } else if (cpu === "stone-👊" && user === "paper-🖐") {
     return "user";
-  } else if (cpu === "stone" && user === "scissor") {
+  } else if (cpu === "stone-👊" && user === "scissor-✌") {
     return "cpu";
-  } else if (cpu === "paper" && user === "scissor") {
+  } else if (cpu === "paper-🖐" && user === "scissor-✌") {
     return "user";
-  } else if (cpu === "paper" && user === "stone") {
+  } else if (cpu === "paper-🖐" && user === "stone-👊") {
     return "cpu";
-  } else if (cpu === "scissor" && user === "stone") {
+  } else if (cpu === "scissor-✌" && user === "stone-👊") {
     return "user";
-  } else if (cpu === "scissor" && user === "paper") {
+  } else if (cpu === "scissor-✌" && user === "paper-🖐") {
     return "cpu";
   }
 }
@@ -19,7 +19,7 @@ function match(user, cpu) {
 function myFunction() {
   let a = document.querySelector("#div").style.display = "none";
   let cpuI = Math.floor(Math.random() * 3);
-  let cpu = ["stone", "paper", "scissor"][cpuI];
+  let cpu = ["stone-👊", "paper-🖐", "scissor-✌"][cpuI];
   let user = "";
   let radios = document.getElementsByName("rad");
   let c = document.querySelector("#output").style.display = "";
