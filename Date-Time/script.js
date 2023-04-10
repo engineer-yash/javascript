@@ -1,40 +1,24 @@
-<!DOCTYPE html>
-<html>
+setInterval(()=>{
+function formatDate(date) {
+  let hours = date.getHours();
+  let minutes = date.getMinutes();
+  let ampm = hours >= 12 ? 'pm' : 'am';
+  let sec = date.getSeconds();
+  hours = hours % 12;
+  hours = hours ? hours : 12; // the hour '0' should be '12'
+  minutes = minutes < 10 ? '0'+minutes : minutes;
+  let months = ["January","February","March","April","May","June","July","August","September","October","November","December"];
+  let strTime = hours + ':' + minutes + ':' +sec+ ' ' + ampm;
+  return date.getDate() + "/" + (months[date.getMonth()]) + "/" + date.getFullYear() + "  " + strTime;
 
-<head>
-  <meta charset="utf-8">
-  <meta name="viewport" content="width=device-width">
-  <title>replit</title>
-  <link href="style.css" rel="stylesheet" type="text/css" />
-  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-KK94CHFLLe+nY2dmCWGMq91rCGa5gtU4mk92HdvYe+M/SXH301p5ILy+dN9+nJOZ" crossorigin="anonymous">
+}
+
+let d = new Date();
+let e = formatDate(d);
+
+time.innerHTML = e;
   
-</head>
+},1000)
 
-<body>
-  <center>
-<p>
-  <button class="btn btn-primary" type="button" data-bs-toggle="collapse" data-bs-target="#collapseWidthExample" aria-expanded="false" aria-controls="collapseWidthExample">
-    See Date and Time
-  </button>
-</p>
-<div style="min-height: 120px;">
-  <div class="collapse collapse-horizontal" id="collapseWidthExample">
-    <div id="time" class="card card-body" style="width: 300px;">
-      
-    </div>
-  </div>
-</div>
-    </center>
-  <script src="script.js"></script>
-
-  <!--
-  This script places a badge on your repl's full-browser view back to your repl's cover
-  page. Try various colors for the theme: dark, light, red, orange, yellow, lime, green,
-  teal, blue, blurple, magenta, pink!
-  -->
-  <script src="https://replit.com/public/js/replit-badge-v2.js" theme="dark" position="bottom-right"></script>
-  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha3/dist/js/bootstrap.bundle.min.js" integrity="sha384-ENjdO4Dr2bkBIFxQpeoTz1HIcje39Wm4jDKdf19U8gI4ddQ3GYNS7NTKfAdVQSZe" crossorigin="anonymous"></script>
-  
-</body>
-
-</html>
+let aa = document.getElementById("time").style.background = "brown"
+let a = document.getElementById("time").style.color = "white"
